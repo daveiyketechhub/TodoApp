@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Items</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #fafafa;
+            font-family: "Nunito", sans-serif;
+            padding-top: 50px;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            font-family: "Raleway", sans-serif;
+        }
+
+        a,p{
+            color: #4b5156;
+        }
+
+        .container{
+            max-width: 550px;
+            margin: auto;
+            background-color: #fff;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        }
+
+        .header-bar{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: #FBFCF8;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #015967 0%, #092147 43%, #092147 100%);
+        }
+
+        .header-bar a{
+            text-decoration: none;
+        }
+
+        .header-bar input{
+            color: rgb(247, 247 247);
+            background: linear-gradient(90deg, #092147 43%, #092147 100%);
+            color: #FBFCF8;
+            border: none;
+            cursor: pointer;
+        }
+
+        .task-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid rgb(226, 226, 226);
+        }
+
+        .task-title{
+            display: flex;
+        }
+
+        .task-title a {
+            display: flex;
+            color: #4b5156;
+            margin-left: 10px;
+        }
+
+        .task-complete-icon{
+            height: 20px;
+            width: 20px;
+            background-color: #243932;
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon{
+            height: 20px;
+            width: 20px;
+            background-color: #d0852d;
+            border-radius: 50%;
+        }
+
+        .delete-link{
+            text-decoration: none;
+            font-weight: 900;
+            color: #410f03;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        #search-add-wrapper{
+            justify-content: space-between;
+            align-items: center;
+            margin-top:20px;
+            display:flex;
+            padding: 8px 8px;
+        }
+
+        #add-link{
+            color:   #015967;
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px  #092147;
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea{
+            border: 1px solid #015967;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%
+        }
+
+        label{
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .button{
+            border: 1px solid  #015967;
+            background-color: #fff1e6;
+            color:  #015967;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .card-body{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+          {% block content%}
+
+          {% endblock content %}
+        </div>
+</body>
+</html>
